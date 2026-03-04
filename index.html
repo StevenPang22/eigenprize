@@ -209,7 +209,7 @@ td:last-child{
   display:inline-flex;
   align-items:center;
   gap:5px;
-  margin-bottom:2.5rem;
+  margin-bottom:1.5rem;
   transition:color .2s;
   cursor:pointer;
 }
@@ -220,43 +220,43 @@ td:last-child{
   font-size:2.2rem;
   font-weight:700;
   letter-spacing:-.02em;
-  margin-bottom:0.5rem;
+  margin-bottom:0.3rem;
 }
 .apply-title .lambda{font-weight:400;color:#b8a080;font-style:italic}
 
 .page-sub{
-  font-size:1.1rem;
+  font-size:1rem;
   color:#777;
-  line-height:1.8;
-  margin-bottom:2.5rem;
+  line-height:1.6;
+  margin-bottom:1.2rem;
 }
 
 .section-label{
   font-family:'Inter',sans-serif;
-  font-size:0.78rem;
+  font-size:0.72rem;
   font-weight:600;
   letter-spacing:.08em;
   text-transform:uppercase;
   color:#1a1a18;
-  margin-bottom:1.2rem;
+  margin-bottom:0.6rem;
   display:block;
 }
 
 hr{
   border:none;
   border-top:1px solid #e8e6e2;
-  margin:2rem 0;
+  margin:1rem 0;
 }
 
-.field{margin-bottom:1.3rem}
+.field{margin-bottom:0.8rem}
 
 .field-label{
   display:block;
   font-family:'Inter',sans-serif;
-  font-size:0.85rem;
+  font-size:0.82rem;
   font-weight:500;
   color:#444;
-  margin-bottom:0.5rem;
+  margin-bottom:0.35rem;
 }
 
 .field-hint{
@@ -278,8 +278,8 @@ textarea{
   background:#fff;
   border:1px solid #e0deda;
   border-radius:5px;
-  padding:0.8rem 1rem;
-  font-size:1.05rem;
+  padding:0.6rem 0.8rem;
+  font-size:1rem;
   font-family:'EB Garamond',Georgia,serif;
   color:#1a1a18;
   outline:none;
@@ -293,7 +293,7 @@ input:focus,textarea:focus{
 
 input::placeholder,textarea::placeholder{color:#aaa;font-style:italic}
 
-textarea{resize:vertical;min-height:80px;line-height:1.75}
+textarea{resize:vertical;min-height:56px;line-height:1.6}
 
 input[type="number"]{-moz-appearance:textfield}
 input[type="number"]::-webkit-outer-spin-button,
@@ -302,8 +302,8 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
 .chip-group{display:flex;gap:0.7rem;flex-wrap:wrap}
 
 .chip{
-  padding:0.6rem 1.4rem;
-  font-size:1rem;
+  padding:0.45rem 1.2rem;
+  font-size:0.95rem;
   font-family:'EB Garamond',Georgia,serif;
   color:#666;
   background:transparent;
@@ -321,19 +321,19 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
   transition:max-height .4s ease,opacity .3s ease,margin .3s ease;
   margin-top:0;
 }
-.conditional.visible{max-height:600px;opacity:1;margin-top:1.8rem}
-.conditional-inner{border-left:2px solid #e0deda;padding-left:1.4rem}
+.conditional.visible{max-height:600px;opacity:1;margin-top:1rem}
+.conditional-inner{border-left:2px solid #e0deda;padding-left:1.2rem}
 
 .file-drop{
   position:relative;border:1px dashed #ddd;border-radius:5px;
-  padding:1.4rem;text-align:center;cursor:pointer;
+  padding:0.8rem;text-align:center;cursor:pointer;
   transition:border-color .2s,background .2s;
 }
 .file-drop:hover,.file-drop.dragover{border-color:#b8a080;background:rgba(184,160,128,.04)}
 .file-drop input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer}
-.file-drop-text{font-size:0.95rem;color:#888;pointer-events:none}
+.file-drop-text{font-size:0.85rem;color:#888;pointer-events:none}
 .file-drop-text em{font-style:normal;color:#666;border-bottom:1px solid #ddd}
-.file-drop-hint{font-size:0.82rem;color:#aaa;margin-top:0.4rem;pointer-events:none}
+.file-drop-hint{font-size:0.75rem;color:#aaa;margin-top:0.25rem;pointer-events:none}
 .file-list{margin-top:0;text-align:left}
 .file-list:not(:empty){margin-top:1rem}
 .file-item{
@@ -347,14 +347,14 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
 
 .submit-btn{
   display:inline-block;background:#1a1a18;color:#f7f6f3;
-  padding:0.9rem 2.8rem;border-radius:5px;
-  font-family:'Inter',sans-serif;font-size:0.95rem;font-weight:500;
+  padding:0.7rem 2.2rem;border-radius:5px;
+  font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:500;
   border:none;cursor:pointer;transition:background .2s;
 }
 .submit-btn:hover{background:#333}
 .submit-btn:active{transform:scale(.98)}
 
-.footer-note{font-size:0.88rem;color:#888;margin-top:1.5rem;line-height:1.75}
+.footer-note{font-size:0.82rem;color:#888;margin-top:0.8rem;line-height:1.6}
 
 .thank-you{display:none}
 .thank-you.show{display:block}
@@ -506,40 +506,42 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
   </a>
 
   <div class="form-wrapper" id="formWrapper">
-    <h1 class="apply-title"><span class="lambda">λ </span>Apply</h1>
-    <p class="page-sub">5–10 minutes. Please don't spend longer than 20.</p>
+    <h1 class="apply-title"><span class="lambda">λ </span>Application</h1>
+    <p class="page-sub">Should take 5 - 10 minutes.</p>
 
     <form id="grantForm" autocomplete="off">
 
       <div>
         <span class="section-label">You</span>
         <div class="field-row">
-          <div class="field">
-            <label class="field-label" for="name">Full name</label>
-            <input type="text" id="name" placeholder="Jane Doe" required>
+          <div class="field" style="flex:3">
+            <label class="field-label" for="name">Name</label>
+            <input type="text" id="name" placeholder="Spencer Green" required>
           </div>
-          <div class="field" style="max-width:100px">
+          <div class="field" style="flex:1">
             <label class="field-label" for="age">Age</label>
-            <input type="number" id="age" placeholder="24" min="1" max="120" required>
+            <input type="number" id="age" placeholder="22" min="1" max="120" required>
           </div>
         </div>
-        <div class="field">
-          <label class="field-label" for="city">City / Town</label>
-          <input type="text" id="city" placeholder="San Francisco, CA" required>
+        <div class="field-row">
+          <div class="field">
+            <label class="field-label" for="email">Email</label>
+            <input type="email" id="email" placeholder="you@example.com" required>
+          </div>
+          <div class="field">
+            <label class="field-label" for="city">City</label>
+            <input type="text" id="city" placeholder="Boston, MA" required>
+          </div>
         </div>
-      </div>
-
-      <hr>
-
-      <div>
-        <span class="section-label">Contact</span>
-        <div class="field">
-          <label class="field-label" for="email">Email</label>
-          <input type="email" id="email" placeholder="you@example.com" required>
-        </div>
-        <div class="field">
-          <label class="field-label" for="social">LinkedIn / Social</label>
-          <input type="url" id="social" placeholder="https://linkedin.com/in/you">
+        <div class="field-row">
+          <div class="field">
+            <label class="field-label" for="org">Org / School <span style="color:#aaa;font-weight:400">(if any)</span></label>
+            <input type="text" id="org" placeholder="Orbit, MIT, Axion Lab, etc.">
+          </div>
+          <div class="field">
+            <label class="field-label" for="social">LinkedIn / Social</label>
+            <input type="url" id="social" placeholder="linkedin.com/in/you">
+          </div>
         </div>
       </div>
 
@@ -547,7 +549,7 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
 
       <div>
         <span class="section-label">What are you?</span>
-        <p class="field-hint" style="margin-bottom:1rem">Select all that apply.</p>
+        <p class="field-hint" style="margin-bottom:0.6rem">Select all that apply.</p>
         <div class="chip-group" id="roleChips">
           <div class="chip" data-role="builder">Builder</div>
           <div class="chip" data-role="scientist">Scientist</div>
@@ -558,7 +560,7 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
           <div class="conditional-inner">
             <div class="field">
               <label class="field-label" for="buildLinks">Portfolio / GitHub / website</label>
-              <textarea id="buildLinks" placeholder="Repos, demos, live sites — drop your links." rows="3"></textarea>
+              <textarea id="buildLinks" placeholder="Build portfolios, repos, live sites — drop as much work as you'd like!" rows="2"></textarea>
             </div>
             <div class="field">
               <label class="field-label">Upload files</label>
@@ -576,7 +578,7 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
           <div class="conditional-inner">
             <div class="field">
               <label class="field-label" for="discovery">What's your greatest discovery?</label>
-              <textarea id="discovery" placeholder="Tell us about a breakthrough." rows="4"></textarea>
+              <textarea id="discovery" placeholder="Tell us about a breakthrough!" rows="2"></textarea>
             </div>
             <div class="field">
               <label class="field-label">Upload supporting work</label>
@@ -594,7 +596,7 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
           <div class="conditional-inner">
             <div class="field">
               <label class="field-label" for="craziest">What's the craziest thing you've ever pulled off?</label>
-              <textarea id="craziest" placeholder="We want the war story." rows="4"></textarea>
+              <textarea id="craziest" placeholder="We love a good story!" rows="2"></textarea>
             </div>
           </div>
         </div>
@@ -606,31 +608,16 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
         <span class="section-label">Questions</span>
         <div class="field">
           <label class="field-label" for="who">Who are you?</label>
-          <textarea id="who" placeholder="Tell us your story." rows="4" required></textarea>
-          <p class="field-hint">3–5 sentences.</p>
-        </div>
-        <div class="field">
-          <label class="field-label" for="care">What do you care about most?</label>
-          <textarea id="care" placeholder="What keeps you up at night?" rows="3" required></textarea>
-          <p class="field-hint">2–3 sentences.</p>
+          <textarea id="who" placeholder="Tell us about yourself!" rows="2" style="min-height:48px" required></textarea>
         </div>
       </div>
 
       <hr>
 
-      <div>
-        <span class="section-label">Last things <span style="color:#aaa;text-transform:none;letter-spacing:0;font-weight:400;font-size:0.75rem">(optional)</span></span>
-        <div class="field">
-          <label class="field-label" for="last">Anything else you want us to know?</label>
-          <textarea id="last" placeholder="Anything goes." rows="2" style="min-height:55px"></textarea>
-        </div>
-        <div class="field">
-          <label class="field-label" for="referral">How did you hear about us?</label>
-          <input type="text" id="referral" placeholder="A name, a link, a hunch.">
-        </div>
-      </div>
-
-      <hr>
+      <label style="font-family:'Inter',sans-serif;font-size:0.82rem;color:#999;display:flex;align-items:baseline;gap:0.5rem;margin-bottom:1.2rem">
+        How did you hear about this?
+        <input type="text" id="referral" placeholder="optional" style="border:none;border-bottom:1px solid #ddd;border-radius:0;padding:0.3rem 0;font-size:0.82rem;font-family:'Inter',sans-serif;color:#666;background:transparent;flex:1;min-width:100px;outline:none">
+      </label>
 
       <div>
         <button type="submit" class="submit-btn">Submit application →</button>
@@ -732,6 +719,30 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
 </div>
 
 <script>
+const AIRTABLE_TOKEN = 'YOUR_TOKEN_HERE';
+const AIRTABLE_BASE  = 'YOUR_BASE_ID';
+const APPLICATIONS_TABLE = 'Applications';
+const REFERRALS_TABLE    = 'Referrals';
+
+async function postToAirtable(table, fields) {
+  const res = await fetch(
+    `https://api.airtable.com/v0/${AIRTABLE_BASE}/${encodeURIComponent(table)}`,
+    {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${AIRTABLE_TOKEN}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ fields }),
+    }
+  );
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.error?.message || `Airtable error ${res.status}`);
+  }
+  return res.json();
+}
+
 function showRefer(){
   document.getElementById('homeView').classList.remove('active');
   document.getElementById('applyView').classList.remove('active');
@@ -739,20 +750,43 @@ function showRefer(){
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
-function submitRefer(){
-  const name=document.getElementById('referFriendName').value.trim();
-  const email=document.getElementById('referFriendEmail').value.trim();
-  const yourName=document.getElementById('referYourName').value.trim();
-  const yourEmail=document.getElementById('referYourEmail').value.trim();
-  if(!yourName||!yourEmail||!name||!email){
-    document.getElementById('referStatus').textContent='Please fill in all fields.';
-    document.getElementById('referStatus').style.color='#c47a3b';
+async function submitRefer(){
+  const yourName  = document.getElementById('referYourName').value.trim();
+  const yourEmail = document.getElementById('referYourEmail').value.trim();
+  const name      = document.getElementById('referFriendName').value.trim();
+  const email     = document.getElementById('referFriendEmail').value.trim();
+  const why       = document.getElementById('referWhy').value.trim();
+  const status    = document.getElementById('referStatus');
+
+  if (!yourName || !yourEmail || !name || !email) {
+    status.textContent = 'Please fill in all fields.';
+    status.style.color = '#c47a3b';
     return;
   }
-  document.getElementById('referForm').style.display='none';
-  const t=document.getElementById('referThankYou');
-  t.classList.add('show');
-  t.style.animation='fadeUp .5s ease forwards';
+
+  const btn = document.querySelector('#referView .submit-btn');
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+  status.textContent = '';
+
+  try {
+    await postToAirtable(REFERRALS_TABLE, {
+      'Your Name':    yourName,
+      'Your Email':   yourEmail,
+      'Friend Name':  name,
+      'Friend Email': email,
+      'Why':          why,
+    });
+    document.getElementById('referForm').style.display = 'none';
+    const t = document.getElementById('referThankYou');
+    t.classList.add('show');
+    t.style.animation = 'fadeUp .5s ease forwards';
+  } catch (err) {
+    status.textContent = 'Something went wrong — please try again. (' + err.message + ')';
+    status.style.color = '#c47a3b';
+    btn.disabled = false;
+    btn.textContent = 'Send referral →';
+  }
 }
 
 function showApply(){
@@ -770,20 +804,6 @@ function showHome(){
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
-function sendRefer(){
-  const input=document.getElementById('referEmail');
-  const status=document.getElementById('referStatus');
-  const email=input.value.trim();
-  if(!email||!email.includes('@')){
-    status.textContent='Please enter a valid email.';
-    status.style.color='#c47a3b';
-    return;
-  }
-  // In production, this would hit your backend
-  status.textContent='Sent. They\'ll hear from us.';
-  status.style.color='#b8a080';
-  input.value='';
-}
 
 const chips=document.querySelectorAll('.chip'),sel=new Set();
 const map={builder:document.getElementById('builderSection'),scientist:document.getElementById('scientistSection'),operator:document.getElementById('operatorSection')};
@@ -808,21 +828,57 @@ function setupFiles(dropId,inputId,listId){
 setupFiles('buildDrop','buildFile','buildFileList');
 setupFiles('sciDrop','sciFile','sciFileList');
 
-document.getElementById('grantForm').addEventListener('submit',e=>{
+document.getElementById('grantForm').addEventListener('submit', async e => {
   e.preventDefault();
-  document.getElementById('formWrapper').classList.add('hidden');
-  const t=document.getElementById('thankYou');
-  t.classList.add('show');
-  t.style.animation='fadeUp .5s ease forwards';
-  window.scrollTo({top:0,behavior:'smooth'});
+  const btn = e.target.querySelector('.submit-btn');
+  btn.disabled = true;
+  btn.textContent = 'Submitting…';
 
-  const gallery=document.getElementById('photoGallery');
-  const frames=[...gallery.children];
-  for(let i=frames.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[frames[i],frames[j]]=[frames[j],frames[i]];}
-  frames.forEach(f=>gallery.appendChild(f));
-  frames.forEach((f,i)=>{
-    setTimeout(()=>f.classList.add('visible'), 600 + i*450);
-  });
+  const fields = {
+    'Name':          document.getElementById('name').value.trim(),
+    'Age':           Number(document.getElementById('age').value),
+    'City':          document.getElementById('city').value.trim(),
+    'Email':         document.getElementById('email').value.trim(),
+    'Organization':  document.getElementById('org').value.trim(),
+    'Social':        document.getElementById('social').value.trim(),
+    'Roles':         [...sel].join(', '),
+    'Builder Links': document.getElementById('buildLinks').value.trim(),
+    'Discovery':     document.getElementById('discovery').value.trim(),
+    'Craziest':      document.getElementById('craziest').value.trim(),
+    'Who':           document.getElementById('who').value.trim(),
+    'Referral':      document.getElementById('referral').value.trim(),
+  };
+
+  try {
+    await postToAirtable(APPLICATIONS_TABLE, fields);
+    document.getElementById('formWrapper').classList.add('hidden');
+    const t = document.getElementById('thankYou');
+    t.classList.add('show');
+    t.style.animation = 'fadeUp .5s ease forwards';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    const gallery = document.getElementById('photoGallery');
+    const frames = [...gallery.children];
+    for (let i = frames.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [frames[i], frames[j]] = [frames[j], frames[i]];
+    }
+    frames.forEach(f => gallery.appendChild(f));
+    frames.forEach((f, i) => {
+      setTimeout(() => f.classList.add('visible'), 600 + i * 450);
+    });
+  } catch (err) {
+    let msg = document.getElementById('applyError');
+    if (!msg) {
+      msg = document.createElement('p');
+      msg.id = 'applyError';
+      msg.style.cssText = 'color:#c47a3b;font-size:0.9rem;margin-top:1rem;font-family:Inter,sans-serif';
+      btn.parentNode.appendChild(msg);
+    }
+    msg.textContent = 'Something went wrong — please try again. (' + err.message + ')';
+    btn.disabled = false;
+    btn.textContent = 'Submit application →';
+  }
 });
 </script>
 </body>
