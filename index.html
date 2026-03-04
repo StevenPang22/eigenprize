@@ -4,6 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Eigenprize</title>
+
+<meta property="og:title" content="The Eigenprize">
+<meta property="og:description" content="No-strings-attached capital for builders, scientists & operators.">
+<meta property="og:image" content="https://eigenprize.com/images/og-image.png">
+<meta property="og:url" content="https://eigenprize.com">
+<meta property="og:type" content="website">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Eigenprize">
+<meta name="twitter:description" content="No-strings-attached capital for builders, scientists & operators.">
+<meta name="twitter:image" content="https://eigenprize.com/images/og-image.png">
+
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -12,7 +24,7 @@
 body{
   font-family:'EB Garamond',Georgia,serif;
   background:#f7f6f3;
-  color:#1a1a18;
+  color:#2d2d2b;
   -webkit-font-smoothing:antialiased;
   min-height:100vh;
 }
@@ -33,11 +45,11 @@ body{
 .mission{
   font-size:1.2rem;
   line-height:1.85;
-  color:#666;
+  color:#777;
   font-style:italic;
   margin-bottom:3rem;
   padding-bottom:3rem;
-  border-bottom:1px solid #e0deda;
+  border-bottom:1px solid #e5e3df;
 }
 
 .mission-bold{
@@ -59,7 +71,7 @@ h1 .lambda{font-weight:400;color:#b8a080;font-style:italic}
 .subtitle{
   font-family:'Inter',-apple-system,sans-serif;
   font-size:0.88rem;
-  color:#777;
+  color:#888;
   letter-spacing:.04em;
   margin-bottom:2rem;
 }
@@ -68,7 +80,7 @@ h1 .lambda{font-weight:400;color:#b8a080;font-style:italic}
   display:inline-block;
   font-size:1.1rem;
   color:#c4b49a;
-  background:rgba(196,180,154,.08);
+  background:rgba(196,180,154,.06);
   padding:0.5rem 1rem;
   border-radius:4px;
   margin-bottom:2rem;
@@ -81,15 +93,15 @@ table{
   border-collapse:collapse;
 }
 
-tr{border-bottom:1px solid #eae8e4}
-tr:first-child{border-top:1px solid #eae8e4}
+tr{border-bottom:1px solid #edebe7}
+tr:first-child{border-top:1px solid #edebe7}
 
 td{padding:0.85rem 0;font-size:1.05rem}
 
 td:first-child{
   font-family:'Inter',sans-serif;
   font-size:0.85rem;
-  color:#888;
+  color:#999;
   letter-spacing:.02em;
 }
 
@@ -102,14 +114,14 @@ td:last-child{
 
 .prompt{
   font-size:1.1rem;
-  color:#555;
+  color:#666;
   line-height:1.75;
   margin-bottom:1.8rem;
 }
 
 .btn{
   display:inline-block;
-  background:#1a1a18;
+  background:#2d2d2b;
   color:#f7f6f3;
   padding:0.85rem 2.5rem;
   border-radius:5px;
@@ -123,26 +135,26 @@ td:last-child{
   border:none;
 }
 
-.btn:hover{background:#333}
+.btn:hover{background:#444}
 
 .note{
   margin-top:1rem;
   font-size:0.85rem;
-  color:#888;
+  color:#999;
 }
 
 /* Docs */
 .docs{
   margin-top:6rem;
   padding-top:3rem;
-  border-top:1px solid #e0deda;
+  border-top:1px solid #e5e3df;
 }
 
 .doc-header{
   font-family:'Inter',sans-serif;
   font-size:0.72rem;
   font-weight:500;
-  color:#999;
+  color:#aaa;
   letter-spacing:.12em;
   text-transform:uppercase;
   margin-bottom:2.5rem;
@@ -154,36 +166,36 @@ td:last-child{
   font-family:'Inter',sans-serif;
   font-size:0.82rem;
   font-weight:600;
-  color:#1a1a18;
+  color:#2d2d2b;
   margin-bottom:0.3rem;
 }
 
 .doc-text{
   font-size:1rem;
-  color:#777;
+  color:#888;
   line-height:1.7;
 }
 
-.doc-text a{color:#1a1a18;text-decoration-color:#ccc}
+.doc-text a{color:#2d2d2b;text-decoration-color:#ddd}
 
 .doc-why{
   font-size:1rem;
   font-style:italic;
-  color:#444;
+  color:#555;
   line-height:1.7;
 }
 
 .footer{
   margin-top:3rem;
   padding-top:1.5rem;
-  border-top:1px solid #e0deda;
+  border-top:1px solid #e5e3df;
   font-family:'Inter',sans-serif;
   font-size:0.72rem;
-  color:#999;
+  color:#aaa;
   letter-spacing:.03em;
 }
 
-.footer span{color:#777;font-weight:500}
+.footer span{color:#888;font-weight:500}
 
 .footer-authors{
   margin-top:0.4rem;
@@ -191,20 +203,20 @@ td:last-child{
 }
 
 .footer-authors a{
-  color:#999;
+  color:#aaa;
   text-decoration:underline;
-  text-decoration-color:#ddd;
+  text-decoration-color:#e5e5e5;
   transition:color .2s;
 }
 
-.footer-authors a:hover{color:#666}
+.footer-authors a:hover{color:#777}
 
 /* =================== APPLY =================== */
 
 .back{
   font-family:'Inter',sans-serif;
   font-size:0.8rem;
-  color:#999;
+  color:#aaa;
   text-decoration:none;
   display:inline-flex;
   align-items:center;
@@ -213,7 +225,7 @@ td:last-child{
   transition:color .2s;
   cursor:pointer;
 }
-.back:hover{color:#555}
+.back:hover{color:#666}
 .back svg{width:14px;height:14px;stroke:currentColor}
 
 .apply-title{
@@ -226,7 +238,7 @@ td:last-child{
 
 .page-sub{
   font-size:1rem;
-  color:#777;
+  color:#888;
   line-height:1.6;
   margin-bottom:1.2rem;
 }
@@ -237,14 +249,14 @@ td:last-child{
   font-weight:600;
   letter-spacing:.08em;
   text-transform:uppercase;
-  color:#1a1a18;
+  color:#2d2d2b;
   margin-bottom:0.6rem;
   display:block;
 }
 
 hr{
   border:none;
-  border-top:1px solid #e8e6e2;
+  border-top:1px solid #eceae6;
   margin:1rem 0;
 }
 
@@ -255,13 +267,13 @@ hr{
   font-family:'Inter',sans-serif;
   font-size:0.82rem;
   font-weight:500;
-  color:#444;
+  color:#555;
   margin-bottom:0.35rem;
 }
 
 .field-hint{
   font-size:0.85rem;
-  color:#999;
+  color:#aaa;
   font-style:italic;
   margin-top:0.35rem;
 }
@@ -276,22 +288,22 @@ input[type="number"],
 textarea{
   width:100%;
   background:#fff;
-  border:1px solid #e0deda;
+  border:1px solid #e5e3df;
   border-radius:5px;
   padding:0.6rem 0.8rem;
   font-size:1rem;
   font-family:'EB Garamond',Georgia,serif;
-  color:#1a1a18;
+  color:#2d2d2b;
   outline:none;
   transition:border-color .2s,box-shadow .2s;
 }
 
 input:focus,textarea:focus{
   border-color:#b8a080;
-  box-shadow:0 0 0 2px rgba(184,160,128,.1);
+  box-shadow:0 0 0 2px rgba(184,160,128,.07);
 }
 
-input::placeholder,textarea::placeholder{color:#aaa;font-style:italic}
+input::placeholder,textarea::placeholder{color:#bbb;font-style:italic}
 
 textarea{resize:vertical;min-height:56px;line-height:1.6}
 
@@ -305,16 +317,16 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
   padding:0.45rem 1.2rem;
   font-size:0.95rem;
   font-family:'EB Garamond',Georgia,serif;
-  color:#666;
+  color:#777;
   background:transparent;
-  border:1px solid #e0deda;
+  border:1px solid #e5e3df;
   border-radius:5px;
   cursor:pointer;
   transition:all .2s;
   user-select:none;
 }
-.chip:hover{border-color:#b8a080;color:#444}
-.chip.selected{background:#f0ece4;border-color:#b8a080;color:#1a1a18}
+.chip:hover{border-color:#b8a080;color:#555}
+.chip.selected{background:#f3efe8;border-color:#b8a080;color:#2d2d2b}
 
 .conditional{
   max-height:0;overflow:hidden;opacity:0;
@@ -322,44 +334,44 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
   margin-top:0;
 }
 .conditional.visible{max-height:600px;opacity:1;margin-top:1rem}
-.conditional-inner{border-left:2px solid #e0deda;padding-left:1.2rem}
+.conditional-inner{border-left:2px solid #e5e3df;padding-left:1.2rem}
 
 .file-drop{
-  position:relative;border:1px dashed #ddd;border-radius:5px;
+  position:relative;border:1px dashed #e5e5e5;border-radius:5px;
   padding:0.8rem;text-align:center;cursor:pointer;
   transition:border-color .2s,background .2s;
 }
-.file-drop:hover,.file-drop.dragover{border-color:#b8a080;background:rgba(184,160,128,.04)}
+.file-drop:hover,.file-drop.dragover{border-color:#b8a080;background:rgba(184,160,128,.03)}
 .file-drop input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer}
-.file-drop-text{font-size:0.85rem;color:#888;pointer-events:none}
-.file-drop-text em{font-style:normal;color:#666;border-bottom:1px solid #ddd}
-.file-drop-hint{font-size:0.75rem;color:#aaa;margin-top:0.25rem;pointer-events:none}
+.file-drop-text{font-size:0.85rem;color:#999;pointer-events:none}
+.file-drop-text em{font-style:normal;color:#777;border-bottom:1px solid #e5e5e5}
+.file-drop-hint{font-size:0.75rem;color:#bbb;margin-top:0.25rem;pointer-events:none}
 .file-list{margin-top:0;text-align:left}
 .file-list:not(:empty){margin-top:1rem}
 .file-item{
   display:flex;align-items:center;justify-content:space-between;
-  padding:0.4rem 0;font-size:0.85rem;color:#888;
-  border-bottom:1px solid #eee;font-family:'Inter',sans-serif;
+  padding:0.4rem 0;font-size:0.85rem;color:#999;
+  border-bottom:1px solid #f1f1f1;font-family:'Inter',sans-serif;
 }
 .file-item:last-child{border-bottom:none}
-.file-remove{background:none;border:none;color:#ccc;cursor:pointer;font-size:1rem;padding:2px 6px;transition:color .2s}
-.file-remove:hover{color:#1a1a18}
+.file-remove{background:none;border:none;color:#ddd;cursor:pointer;font-size:1rem;padding:2px 6px;transition:color .2s}
+.file-remove:hover{color:#2d2d2b}
 
 .submit-btn{
-  display:inline-block;background:#1a1a18;color:#f7f6f3;
+  display:inline-block;background:#2d2d2b;color:#f7f6f3;
   padding:0.7rem 2.2rem;border-radius:5px;
   font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:500;
   border:none;cursor:pointer;transition:background .2s;
 }
-.submit-btn:hover{background:#333}
+.submit-btn:hover{background:#444}
 .submit-btn:active{transform:scale(.98)}
 
-.footer-note{font-size:0.82rem;color:#888;margin-top:0.8rem;line-height:1.6}
+.footer-note{font-size:0.82rem;color:#999;margin-top:0.8rem;line-height:1.6}
 
 .thank-you{display:none}
 .thank-you.show{display:block}
 .thank-you h2{font-size:2.2rem;font-weight:700;letter-spacing:-.02em;margin-bottom:0.8rem}
-.thank-you p{font-size:1.1rem;color:#666;line-height:1.8}
+.thank-you p{font-size:1.1rem;color:#777;line-height:1.8}
 
 .form-wrapper.hidden{display:none}
 
@@ -396,14 +408,14 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
 
 .frame-border{
   position:relative;
-  background:#eae7e0;
+  background:#edebe5;
   border-radius:3px;
   aspect-ratio:4/3;
   overflow:hidden;
   box-shadow:
-    inset 0 0 0 3px #1a1a18,
+    inset 0 0 0 3px #2d2d2b,
     inset 0 0 0 5px #f7f6f3,
-    inset 0 0 0 6px rgba(26,26,24,.15);
+    inset 0 0 0 6px rgba(26,26,24,.10);
   filter:url(#scribble);
 }
 
@@ -429,7 +441,7 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
   margin-top:0.6rem;
   font-size:0.88rem;
   font-style:italic;
-  color:#888;
+  color:#999;
   line-height:1.4;
 }
 
@@ -446,7 +458,7 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
 <!-- =================== HOME =================== -->
 <div class="view active" id="homeView">
   <div class="home-inner">
-    <p class="mission">We believe amazing people are all around us.<br>Who have the power to <em style="color:#1a1a18; font-style:italic;">transform everything</em>.</p>
+    <p class="mission">We believe amazing people are all around us.<br>Who have the power to <em style="color:#2d2d2b; font-style:italic;">transform everything</em>.</p>
 
     <p class="mission-bold">We want to help them.</p>
     <h1><span class="lambda">λ </span>The Eigenprize</h1>
@@ -464,7 +476,7 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
     <p class="prompt">Just tell us about you.<br>And show us your work.</p>
 
     <button class="btn" onclick="showApply()">Apply now →</button>
-    <p class="note"><a href="#" onclick="showRefer();return false" style="color:#888;text-decoration:underline;text-decoration-color:#ccc">Know someone who deserves this?</a></p>
+    <p class="note"><a href="#" onclick="showRefer();return false" style="color:#999;text-decoration:underline;text-decoration-color:#ddd">Know someone who deserves this?</a></p>
 
     <div class="docs">
       <div class="doc-header">Documentation</div>
@@ -535,7 +547,7 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
         </div>
         <div class="field-row">
           <div class="field">
-            <label class="field-label" for="org">Org / School <span style="color:#aaa;font-weight:400">(if any)</span></label>
+            <label class="field-label" for="org">Org / School <span style="color:#bbb;font-weight:400">(if any)</span></label>
             <input type="text" id="org" placeholder="Orbit, MIT, Axion Lab, etc.">
           </div>
           <div class="field">
@@ -614,9 +626,9 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
 
       <hr>
 
-      <label style="font-family:'Inter',sans-serif;font-size:0.82rem;color:#999;display:flex;align-items:baseline;gap:0.5rem;margin-bottom:1.2rem">
+      <label style="font-family:'Inter',sans-serif;font-size:0.82rem;color:#aaa;display:flex;align-items:baseline;gap:0.5rem;margin-bottom:1.2rem">
         How did you hear about this?
-        <input type="text" id="referral" placeholder="optional" style="border:none;border-bottom:1px solid #ddd;border-radius:0;padding:0.3rem 0;font-size:0.82rem;font-family:'Inter',sans-serif;color:#666;background:transparent;flex:1;min-width:100px;outline:none">
+        <input type="text" id="referral" placeholder="optional" style="border:none;border-bottom:1px solid #e5e5e5;border-radius:0;padding:0.3rem 0;font-size:0.82rem;font-family:'Inter',sans-serif;color:#777;background:transparent;flex:1;min-width:100px;outline:none">
       </label>
 
       <div>
