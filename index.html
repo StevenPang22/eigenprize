@@ -540,7 +540,7 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
           </div>
           <div class="field">
             <label class="field-label" for="social">LinkedIn / Social</label>
-            <input type="url" id="social" placeholder="linkedin.com/in/you">
+            <input type="text" id="social" placeholder="linkedin.com/in/you">
           </div>
         </div>
       </div>
@@ -719,26 +719,19 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
 </div>
 
 <script>
-const AIRTABLE_TOKEN = 'YOUR_TOKEN_HERE';
-const AIRTABLE_BASE  = 'YOUR_BASE_ID';
+const PROXY_URL = 'WORKER_URL_HERE';
 const APPLICATIONS_TABLE = 'Applications';
 const REFERRALS_TABLE    = 'Referrals';
 
 async function postToAirtable(table, fields) {
-  const res = await fetch(
-    `https://api.airtable.com/v0/${AIRTABLE_BASE}/${encodeURIComponent(table)}`,
-    {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${AIRTABLE_TOKEN}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ fields }),
-    }
-  );
+  const res = await fetch(PROXY_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ table, fields }),
+  });
   if (!res.ok) {
     const err = await res.json().catch(() => ({}));
-    throw new Error(err.error?.message || `Airtable error ${res.status}`);
+    throw new Error(err.error?.message || `Server error ${res.status}`);
   }
   return res.json();
 }
