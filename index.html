@@ -807,10 +807,10 @@ function setupFiles(dropId, inputId, listId) {
 const buildStore = setupFiles('buildDrop', 'buildFile', 'buildFileList');
 const sciStore = setupFiles('sciDrop', 'sciFile', 'sciFileList');
 
-function fileToBase64(file) {
+function fileToBase64(file, category) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
-    reader.onload = () => resolve({ name: file.name, type: file.type, data: reader.result.split(',')[1] });
+    reader.onload = () => resolve({ name: file.name, type: file.type, data: reader.result.split(',')[1], category });
     reader.onerror = reject;
     reader.readAsDataURL(file);
   });
@@ -824,8 +824,8 @@ document.getElementById('grantForm').addEventListener('submit', async e => {
   btn.disabled = true;
   btn.textContent = 'Submitting\u2026';
 
-  const buildFileData = await Promise.all(buildStore.files.map(fileToBase64));
-  const sciFileData = await Promise.all(sciStore.files.map(fileToBase64));
+  const buildFileData = await Promise.all(buildStore.files.map(f => fileToBase64(f, 'build')));
+  const sciFileData = await Promise.all(sciStore.files.map(f => fileToBase64(f, 'science')));
 
   const fields = {
     'Name':          document.getElementById('name').value.trim(),
