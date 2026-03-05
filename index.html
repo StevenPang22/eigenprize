@@ -778,19 +778,28 @@ function setupFiles(dropId, inputId, listId) {
   const list = document.getElementById(listId);
   const store = { files: [] };
 
+  function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
   function render() {
     list.innerHTML = store.files.map((f, i) =>
-      '<div class="file-item"><span>' + f.name + '</span><button class="file-remove" data-i="' + i + '">&times;</button></div>'
+      '<div class="file-item"><span>' + esc(f.name) + '</span><button class="file-remove" data-i="' + i + '">&times;</button></div>'
     ).join('');
     list.querySelectorAll('.file-remove').forEach(b =>
       b.addEventListener('click', e => { e.stopPropagation(); store.files.splice(+b.dataset.i, 1); render(); })
     );
   }
 
-  inp.addEventListener('change', () => { store.files.push(...inp.files); inp.value = ''; render(); });
+  const MAX_FILE_SIZE = 50 * 1024 * 1024;
+  function addFiles(newFiles) {
+    for (const f of newFiles) {
+      if (f.size > MAX_FILE_SIZE) { alert(f.name + ' exceeds the 50 MB limit.'); continue; }
+      store.files.push(f);
+    }
+    render();
+  }
+  inp.addEventListener('change', () => { addFiles(inp.files); inp.value = ''; });
   drop.addEventListener('dragover', e => { e.preventDefault(); drop.classList.add('dragover'); });
   drop.addEventListener('dragleave', () => drop.classList.remove('dragover'));
-  drop.addEventListener('drop', e => { e.preventDefault(); drop.classList.remove('dragover'); store.files.push(...e.dataTransfer.files); render(); });
+  drop.addEventListener('drop', e => { e.preventDefault(); drop.classList.remove('dragover'); addFiles(e.dataTransfer.files); });
 
   return store;
 }
