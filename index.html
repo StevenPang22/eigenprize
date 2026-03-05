@@ -709,12 +709,17 @@ function toggleRemind() {
   document.getElementById('remindRow').classList.toggle('open');
 }
 
-function submitRemind() {
+async function submitRemind() {
   const email = document.getElementById('remindEmail').value.trim();
   const status = document.getElementById('remindStatus');
   if (!email) { status.textContent = 'Please enter an email.'; return; }
-  status.textContent = 'Got it — we\'ll remind you.';
-  document.getElementById('remindRow').classList.remove('open');
+  try {
+    await postToAirtable('Reminders', { 'Email': email });
+    status.textContent = 'Got it — we\'ll remind you.';
+    document.getElementById('remindRow').classList.remove('open');
+  } catch (err) {
+    status.textContent = 'Something went wrong — please try again.';
+  }
 }
 
 /* ---------- Role chips ---------- */

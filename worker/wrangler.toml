@@ -4,4 +4,4 @@ compatibility_date = "2024-01-01"
 
 [vars]
 AIRTABLE_BASE_ID = "appyuiojG9ecspNtn"
-ALLOWED_TABLES = "Applications,Referrals"
+ALLOWED_TABLES = "Applications,Referrals,Reminders"
