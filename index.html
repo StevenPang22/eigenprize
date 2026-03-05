@@ -489,7 +489,7 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
       <hr class="form-hr">
 
       <div>
-        <span class="section-label">What are you?</span>
+        <span class="section-label">Show us your work! <span style="font-style:italic;letter-spacing:0.02em;text-transform:none;font-size:0.78rem">— this is the only important section.</span></span>
         <p class="field-hint" style="margin-bottom:0.6rem">Select all that apply.</p>
         <div class="chip-group" id="roleChips">
           <div class="chip" data-role="builder">Builder</div>
@@ -518,7 +518,7 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
         <div class="conditional" id="scientistSection">
           <div class="conditional-inner">
             <div class="field">
-              <label class="field-label" for="discovery">What's your greatest discovery?</label>
+              <label class="field-label" for="discovery">What is your greatest discovery?</label>
               <textarea id="discovery" placeholder="Tell us about a breakthrough!" rows="2"></textarea>
             </div>
             <div class="field">
@@ -526,7 +526,7 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
               <div class="file-drop" id="sciDrop">
                 <input type="file" id="sciFile" multiple>
                 <div class="file-drop-text">Drag & drop or <em>browse</em></div>
-                <div class="file-drop-hint">Papers, data, figures — whatever proves it.</div>
+                <div class="file-drop-hint">Papers, data, figures, etc.</div>
                 <div class="file-list" id="sciFileList"></div>
               </div>
             </div>
@@ -548,7 +548,7 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
       <div>
         <span class="section-label">Questions</span>
         <div class="field">
-          <label class="field-label" for="who">Who are you?</label>
+          <label class="field-label" for="who">Who are you? (optional)</label>
           <textarea id="who" placeholder="Tell us about yourself!" rows="2" style="min-height:48px" required></textarea>
         </div>
       </div>
@@ -621,8 +621,8 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
     The Eigenprize
   </a>
 
-  <h1 class="page-title"><span class="lambda">λ </span>Nominate someone</h1>
-  <p class="page-sub">Know someone brilliant? Tell us about them and we'll reach out.<br><br>If they win, you get $500.</p>
+  <h1 class="page-title" id="referTitle"><span class="lambda">λ </span>Nominate someone</h1>
+  <p class="page-sub" id="referSub">Know someone brilliant? Tell us about them and we'll reach out.<br><br>If they win, you get $500.</p>
 
   <form id="referForm" class="form-area" autocomplete="off">
     <div class="field">
@@ -889,6 +889,8 @@ document.getElementById('referForm').addEventListener('submit', async e => {
       'Friend Email': email,
       'Why':          why,
     });
+    document.getElementById('referTitle').style.display = 'none';
+    document.getElementById('referSub').style.display = 'none';
     document.getElementById('referForm').style.display = 'none';
     const t = document.getElementById('referThankYou');
     t.classList.add('show');
