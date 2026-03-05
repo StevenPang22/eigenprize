@@ -840,8 +840,6 @@ document.getElementById('grantForm').addEventListener('submit', async e => {
     'Craziest':      document.getElementById('craziest').value.trim(),
     'Who':           document.getElementById('who').value.trim(),
     'Referral':      document.getElementById('referral').value.trim(),
-    'Build Files':   buildStore.files.map(f => f.name).join(', '),
-    'Science Files': sciStore.files.map(f => f.name).join(', '),
   };
 
   try {
