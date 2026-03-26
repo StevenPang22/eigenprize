@@ -5,3 +5,8 @@ compatibility_date = "2024-01-01"
 [vars]
 AIRTABLE_BASE_ID = "appyuiojG9ecspNtn"
 ALLOWED_TABLES = "Applications,Referrals,Reminders"
+R2_PUBLIC_URL = "https://pub-f539afc57b734d9d8852c60f5b25fd94.r2.dev"
+
+[[r2_buckets]]
+binding = "UPLOADS"
+bucket_name = "eigenprize-uploads"
