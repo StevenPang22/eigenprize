@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Winners | The Eigenprize</title>
+
+<meta property="og:title" content="The Eigenprize | Winners">
+<meta property="og:description" content="The winners of the Eigenprize have been selected.">
+<meta property="og:image" content="https://eigen.build/images/eigenprize-og.png">
+<meta property="og:url" content="https://eigen.build/winners.html">
+<meta property="og:type" content="website">
+
+<link rel="canonical" href="https://eigen.build/winners.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Eigenprize | Winners">
+<meta name="twitter:description" content="The winners of the Eigenprize have been selected.">
+<meta name="twitter:image" content="https://eigen.build/images/eigenprize-og.png">
+
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{font-size:15.5px}
+body{font-family:'EB Garamond',Georgia,serif;background:#f7f6f3;color:#1a1a18;-webkit-font-smoothing:antialiased}
+.wrapper{max-width:860px;margin:0 auto;padding:2.5rem 2.5rem 4rem}
+
+/* --- HEADER --- */
+.topbar{
+  font-family:'Inter',-apple-system,sans-serif;
+  font-size:1.3rem;font-weight:500;
+  color:#8c8780;letter-spacing:0.12em;text-transform:uppercase;
+  display:flex;align-items:center;gap:0.6rem;
+  cursor:default;
+  margin-bottom:0.15rem;
+}
+.topbar-lambda{font-family:'EB Garamond',Georgia,serif;font-size:2rem;font-style:italic;color:#b8a080;text-transform:none;letter-spacing:0}
+.eq{margin-left:auto;font-family:'EB Garamond',Georgia,serif;font-size:1.5rem;color:#b8a080;text-transform:none;letter-spacing:0.02em}
+
+/* --- DIVIDER --- */
+.divider{border:none;border-top:1px solid #d0cdc8;margin-bottom:2rem}
+
+/* --- BACK LINK --- */
+.back{
+  font-family:'Inter',sans-serif;font-size:0.8rem;color:#8c8780;
+  text-decoration:none;display:inline-flex;align-items:center;gap:5px;
+  margin-bottom:1.5rem;transition:color .2s;cursor:pointer;
+}
+.back:hover{color:#3d3a36}
+.back svg{width:14px;height:14px;stroke:currentColor}
+
+/* --- PAGE TITLE --- */
+.page-title{font-size:2.2rem;font-weight:700;letter-spacing:-.02em;margin-bottom:0.3rem}
+.page-title .lambda{font-weight:400;color:#b8a080;font-style:italic}
+.page-sub{font-size:1.05rem;color:#6b6862;line-height:1.7;margin-bottom:2.5rem;max-width:560px}
+
+/* --- SECTION LABELS --- */
+.section-label{
+  font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:500;
+  letter-spacing:.1em;text-transform:uppercase;color:#8c8780;
+  display:block;margin-bottom:1rem;
+}
+
+/* --- FIRST PRIZE --- */
+.first-prize{
+  border-left:3px solid #b8a080;padding-left:1.2rem;
+  margin-bottom:2.8rem;
+}
+.first-prize .place{
+  font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;color:#b8a080;
+  display:block;margin-bottom:0.4rem;
+}
+.first-prize .name{font-size:2.6rem;font-weight:700;letter-spacing:-0.02em;line-height:1.1;margin-bottom:0.3rem}
+.first-prize .amount{font-size:1.3rem;font-weight:600;color:#3d3a36;font-variant-numeric:tabular-nums}
+.first-prize .desc{
+  font-family:'Cormorant Garamond',Georgia,serif;font-size:1.15rem;font-style:italic;
+  color:#5a5650;line-height:1.6;margin-top:0.5rem;max-width:560px;
+}
+
+/* --- SECOND / THIRD --- */
+.podium-row{display:grid;grid-template-columns:1fr 1fr;gap:0 3rem;margin-bottom:2.8rem}
+.podium{border-left:2px solid #d0cdc8;padding-left:1rem}
+.podium .place{
+  font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;color:#8c8780;
+  display:block;margin-bottom:0.35rem;
+}
+.podium .name{font-size:1.6rem;font-weight:700;letter-spacing:-0.01em;line-height:1.15;margin-bottom:0.2rem}
+.podium .amount{font-size:1.05rem;font-weight:600;color:#6b6862;font-variant-numeric:tabular-nums}
+.podium .desc{
+  font-family:'Cormorant Garamond',Georgia,serif;font-size:1.05rem;font-style:italic;
+  color:#5a5650;line-height:1.6;margin-top:0.45rem;
+}
+
+/* --- FOURTH PLACE LIST --- */
+.winners-table{width:100%;border-collapse:collapse;max-width:560px}
+.winners-table tr{border-bottom:1px solid #e0deda}
+.winners-table tr:last-child{border-bottom:none}
+.winners-table td{padding:0.5rem 0;font-size:1.1rem;vertical-align:baseline}
+.winners-table td:last-child{
+  text-align:right;font-family:'Inter',sans-serif;font-size:0.82rem;
+  color:#8c8780;font-variant-numeric:tabular-nums;white-space:nowrap;padding-left:1rem;
+}
+
+/* --- CLOSING --- */
+.closing{
+  font-family:'Cormorant Garamond',Georgia,serif;font-size:1.1rem;font-style:italic;
+  color:#5a5650;margin-top:2.8rem;line-height:1.7;max-width:560px;
+}
+
+/* --- FOOTER --- */
+.footer{
+  margin-top:3rem;padding-top:0.6rem;
+  border-top:1px solid #d0cdc8;
+  display:flex;flex-direction:column;gap:0.25rem;
+  font-family:'Inter',sans-serif;font-size:0.75rem;color:#6b6862;letter-spacing:0.03em;line-height:1.5;
+}
+.footer a{color:#6b6862;font-weight:500;text-decoration:none}
+.footer a:hover{opacity:0.6}
+
+/* --- RESPONSIVE --- */
+@media(max-width:640px){
+  .wrapper{padding:1.8rem 1.2rem 3rem}
+  .topbar{font-size:0.75rem;flex-wrap:wrap;gap:0.3rem;row-gap:0.2rem}
+  .topbar-lambda{font-size:1.4rem}
+  .eq{margin-left:0;font-size:1rem;width:100%}
+  .divider{margin-bottom:1.4rem}
+  .first-prize .name{font-size:2rem}
+  .podium-row{grid-template-columns:1fr;gap:1.6rem 0}
+  .winners-table td{font-size:1rem}
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <div class="topbar">
+    <span class="topbar-lambda">λ</span>
+    <span>THE EIGENPRIZE</span>
+    <span class="eq">Av = λv</span>
+  </div>
+
+  <hr class="divider">
+
+  <a class="back" href="index.html">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M19 12H5M5 12l6-6M5 12l6 6"/></svg>
+    The Eigenprize
+  </a>
+
+  <h1 class="page-title"><span class="lambda">λ </span>Winners</h1>
+  <p class="page-sub">Thank you to everyone who applied. We read every application, and we were blown away. But we had to choose, so, here are the winners.</p>
+
+  <div class="first-prize">
+    <span class="place">First Prize</span>
+    <div class="name">Dariia Dantseva</div>
+    <div class="amount">$100,000</div>
+    <p class="desc">Self-tested a DIY COVID vaccine (2020). Built her own lab in the middle of a warzone. Pioneering stem cell protocols to heal burn victims in Ukraine.</p>
+  </div>
+
+  <div class="podium-row">
+    <div class="podium">
+      <span class="place">Second Prize</span>
+      <div class="name">Armaan Gomes</div>
+      <div class="amount">$30,000</div>
+      <p class="desc">Fabricated 8 custom chips as an MIT freshman. Built a CPU from scratch in his dorm. Now building a neural net accelerator that computes with sound.</p>
+    </div>
+    <div class="podium">
+      <span class="place">Third Prize</span>
+      <div class="name">Asterios Arampatzis</div>
+      <div class="amount">$20,000</div>
+      <p class="desc">Built the first genetic PID controller in living cells. Launching the largest biology satellite ever sent to orbit. Hacked microwave ovens into lab equipment.</p>
+    </div>
+  </div>
+
+  <span class="section-label">Fourth Prize — $5,000 each</span>
+  <table class="winners-table">
+    <tr><td>Alex Waldherr</td><td>$5,000</td></tr>
+    <tr><td>Aubrey Neiderhoffer</td><td>$5,000</td></tr>
+    <tr><td>Claire Wang</td><td>$5,000</td></tr>
+    <tr><td>Elizabeth Hudson</td><td>$5,000</td></tr>
+    <tr><td>Elon Litman</td><td>$5,000</td></tr>
+    <tr><td>Feodor Yevtushenko</td><td>$5,000</td></tr>
+    <tr><td>Grant Gao</td><td>$5,000</td></tr>
+    <tr><td>Houjun Liu</td><td>$5,000</td></tr>
+    <tr><td>Johannes Galatsanos</td><td>$5,000</td></tr>
+    <tr><td>Kathy Liu</td><td>$5,000</td></tr>
+    <tr><td>Lev Chizhov</td><td>$5,000</td></tr>
+    <tr><td>Lexi Mattick</td><td>$5,000</td></tr>
+    <tr><td>Liyam Chitayat</td><td>$5,000</td></tr>
+    <tr><td>Lukas Bongartz</td><td>$5,000</td></tr>
+    <tr><td>Maxwell Howeth</td><td>$5,000</td></tr>
+    <tr><td>Preet Patel</td><td>$5,000</td></tr>
+    <tr><td>Shepherd Kruse</td><td>$5,000</td></tr>
+    <tr><td>Sofia Scarlat</td><td>$5,000</td></tr>
+    <tr><td>Soumil Sahjpall</td><td>$5,000</td></tr>
+    <tr><td>Timothy Chang</td><td>$5,000</td></tr>
+    <tr><td>Zachary Plotkin</td><td>$5,000</td></tr>
+    <tr><td>Zander Chearavanont</td><td>$5,000</td></tr>
+  </table>
+
+  <p class="closing">To everyone who applied — keep building, discovering, operating. See you next time.</p>
+
+  <div class="footer">
+    <div>Funded by <a href="https://www.orbit.engineering/">ORBIT</a> and Mene Capital</div>
+    <div>If you have questions, please email steven [at] orbit.engineering — with the subject line [eigenprize]</div>
+  </div>
+
+</div>
+<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

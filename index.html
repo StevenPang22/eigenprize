@@ -346,13 +346,63 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
   padding:0.5rem 1rem;
   text-align:center;
   margin-bottom:1.5rem;
+  transition:background .2s,border-color .2s;
 }
+a.deadline-banner:hover{background:rgba(184,160,128,.15);border-color:rgba(184,160,128,.4)}
+
+/* --- WINNERS CARD --- */
+.winners-card{
+  position:relative;
+  border:1px solid #b8a080;
+  border-radius:4px;
+  background:linear-gradient(160deg,rgba(184,160,128,.14) 0%,rgba(184,160,128,.05) 45%,rgba(184,160,128,.16) 100%);
+  box-shadow:0 0 0 4px #f7f6f3,0 0 0 5px rgba(184,160,128,.35),0 8px 28px rgba(184,160,128,.18);
+  padding:2rem 1.8rem 2.1rem;
+  margin:0.4rem 0.35rem 2.8rem;
+  text-align:center;
+  animation:cardIn .8s ease both;
+}
+@keyframes cardIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.winners-card .kicker{
+  font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;color:#b8a080;
+  display:flex;align-items:center;justify-content:center;gap:0.8rem;
+  margin-bottom:0.7rem;
+}
+.winners-card .kicker::before,
+.winners-card .kicker::after{
+  content:"";height:1px;width:2.5rem;background:linear-gradient(90deg,transparent,#b8a080);
+}
+.winners-card .kicker::after{background:linear-gradient(90deg,#b8a080,transparent)}
+.winners-card h2{
+  font-size:2.1rem;font-weight:700;letter-spacing:-0.015em;
+  margin-bottom:0.35rem;
+}
+.winners-card p{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:1.15rem;font-style:italic;color:#5a5650;line-height:1.6;
+  margin-bottom:1.3rem;
+}
+.winners-btn{
+  display:inline-block;background:#1a1a18;color:#f7f6f3;
+  padding:0.75rem 2.4rem;border-radius:5px;
+  font-family:'Inter',sans-serif;font-size:0.92rem;font-weight:500;
+  letter-spacing:.04em;
+  text-decoration:none;transition:background .2s,transform .2s,box-shadow .2s;
+  box-shadow:0 0 0 0 rgba(184,160,128,.45);
+  animation:btnGlow 2.6s ease-in-out infinite;
+}
+@keyframes btnGlow{
+  0%,100%{box-shadow:0 0 0 0 rgba(184,160,128,.0)}
+  50%{box-shadow:0 0 0 6px rgba(184,160,128,.18)}
+}
+.winners-btn:hover{background:#3d3a36;transform:translateY(-1px);box-shadow:0 4px 14px rgba(26,26,24,.25);animation:none}
 </style>
 </head>
 <body>
 <div class="wrapper">
 
-<div class="deadline-banner">PRIZE COMPLETE - Results Announcing Soon.</div>
+<a href="winners.html" class="deadline-banner" style="display:block;text-decoration:none;cursor:pointer">WINNERS ANNOUNCED — SEE THE RESULTS →</a>
 
 <!-- =================== HOME =================== -->
 <div class="view active" id="homeView">
@@ -364,6 +414,13 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0
   </div>
 
   <hr class="divider">
+
+  <div class="winners-card">
+    <div class="kicker">✦ &nbsp;The results are in&nbsp; ✦</div>
+    <h2>The winners have been selected.</h2>
+    <p>Thank you to everyone who applied — we were blown away.</p>
+    <a class="winners-btn" href="winners.html">View winners →</a>
+  </div>
 
   <div class="main-grid">
     <div class="col-left">
