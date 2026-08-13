@@ -99,10 +99,43 @@ body{font-family:'EB Garamond',Georgia,serif;background:#f7f6f3;color:#1a1a18;-w
 .winners-table tr{border-bottom:1px solid #e0deda}
 .winners-table tr:last-child{border-bottom:none}
 .winners-table td{padding:0.5rem 0;font-size:1.1rem;vertical-align:baseline}
+.winners-table td:first-child{position:relative}
 .winners-table td:last-child{
   text-align:right;font-family:'Inter',sans-serif;font-size:0.82rem;
   color:#8c8780;font-variant-numeric:tabular-nums;white-space:nowrap;padding-left:1rem;
 }
+
+/* linked winner names */
+.winners-table a{
+  color:inherit;
+  text-decoration:underline dotted rgba(184,160,128,.9);
+  text-underline-offset:3px;
+  transition:color .2s;
+}
+.winners-table a:hover{color:#8a6f4d}
+
+/* hover descriptions */
+.tip{
+  position:absolute;left:0;bottom:calc(100% + 7px);z-index:5;
+  width:max-content;max-width:26rem;
+  background:#fffdfa;border:1px solid #b8a080;border-radius:4px;
+  padding:0.55rem 0.85rem;
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:1rem;font-style:italic;color:#5a5650;line-height:1.55;
+  box-shadow:0 6px 18px rgba(26,26,24,.1);
+  opacity:0;visibility:hidden;transform:translateY(4px);
+  transition:opacity .18s ease,transform .18s ease,visibility .18s;
+  pointer-events:none;
+}
+.winners-table tr:hover .tip{opacity:1;visibility:visible;transform:translateY(0)}
+
+/* --- TOP THREE NAME LINKS --- */
+.first-prize .name a,.podium .name a{
+  color:inherit;text-decoration:none;
+  border-bottom:2px solid rgba(184,160,128,.35);
+  transition:border-color .2s;
+}
+.first-prize .name a:hover,.podium .name a:hover{border-color:#b8a080}
 
 /* --- CLOSING --- */
 .closing{
@@ -130,6 +163,7 @@ body{font-family:'EB Garamond',Georgia,serif;background:#f7f6f3;color:#1a1a18;-w
   .first-prize .name{font-size:2rem}
   .podium-row{grid-template-columns:1fr;gap:1.6rem 0}
   .winners-table td{font-size:1rem}
+  .tip{display:none}
 }
 </style>
 </head>
@@ -162,13 +196,13 @@ body{font-family:'EB Garamond',Georgia,serif;background:#f7f6f3;color:#1a1a18;-w
   <div class="podium-row">
     <div class="podium">
       <span class="place">Second Prize</span>
-      <div class="name">Armaan Gomes</div>
+      <div class="name"><a href="https://armaangomes.com/" target="_blank" rel="noopener">Armaan Gomes</a></div>
       <div class="amount">$30,000</div>
-      <p class="desc">Fabricated 8 custom chips as an MIT freshman. Built a CPU from scratch in his dorm. Now building a neural net accelerator that computes with sound.</p>
+      <p class="desc">Fabricated 8 custom chips as a highschooler. Built a CPU from scratch in his dorm to play DOOM with friends. Now building a neural net accelerator that computes with sound.</p>
     </div>
     <div class="podium">
       <span class="place">Third Prize</span>
-      <div class="name">Asterios Arampatzis</div>
+      <div class="name"><a href="https://asteriosarampatzis.com" target="_blank" rel="noopener">Asterios Arampatzis</a></div>
       <div class="amount">$20,000</div>
       <p class="desc">Built the first genetic PID controller in living cells. Launching the largest biology satellite ever sent to orbit. Hacked microwave ovens into lab equipment.</p>
     </div>
@@ -180,23 +214,23 @@ body{font-family:'EB Garamond',Georgia,serif;background:#f7f6f3;color:#1a1a18;-w
     <tr><td>Aubrey Neiderhoffer</td><td>$5,000</td></tr>
     <tr><td>Claire Wang</td><td>$5,000</td></tr>
     <tr><td>Elizabeth Hudson</td><td>$5,000</td></tr>
-    <tr><td>Elon Litman</td><td>$5,000</td></tr>
+    <tr><td><a href="https://elonlit.com" target="_blank" rel="noopener">Elon Litman</a><span class="tip">I want to uncover the fundamental laws underlying deep learning. Major technological revolutions always start with empirical breakthroughs, like how people built working steam engines and airplanes long before anyone understood thermodynamics or aerodynamics. My work specifically focuses on generalization, using NTK theory and physics-inspired formalisms to explain why neural networks learn the way they do. Figuring out this underlying theory is required to unlock the next massive leap in model capabilities. It is also one of the most promising paths forward for AI safety, because alignment is inevitably tethered to understanding how these systems actually work.</span></td><td>$5,000</td></tr>
     <tr><td>Feodor Yevtushenko</td><td>$5,000</td></tr>
     <tr><td>Grant Gao</td><td>$5,000</td></tr>
-    <tr><td>Houjun Liu</td><td>$5,000</td></tr>
-    <tr><td>Johannes Galatsanos</td><td>$5,000</td></tr>
-    <tr><td>Kathy Liu</td><td>$5,000</td></tr>
+    <tr><td><a href="https://www.jemoka.com/" target="_blank" rel="noopener">Houjun Liu</a><span class="tip">Adaptive architectures, flexible harnesses, closing the compute/dollar Pareto.</span></td><td>$5,000</td></tr>
+    <tr><td><a href="https://www.linkedin.com/in/johannesgalatsanosdueck/" target="_blank" rel="noopener">Johannes Galatsanos</a><span class="tip">Co-Founder and CEO of Diffraqtion, where he is leading the development of the first commercial quantum camera designed to fundamentally expand how satellites and machines perceive the world. Seeing farther, resolving finer detail, and enabling faster, smarter decisions at the edge to enable defense, space, and commercial applications.</span></td><td>$5,000</td></tr>
+    <tr><td><a href="https://www.linkedin.com/in/kathy-liu-/" target="_blank" rel="noopener">Kathy Liu</a></td><td>$5,000</td></tr>
     <tr><td>Lev Chizhov</td><td>$5,000</td></tr>
     <tr><td>Lexi Mattick</td><td>$5,000</td></tr>
-    <tr><td>Liyam Chitayat</td><td>$5,000</td></tr>
-    <tr><td>Lukas Bongartz</td><td>$5,000</td></tr>
+    <tr><td><a href="https://www.linkedin.com/in/liyam-chitayat-b92973160/" target="_blank" rel="noopener">Liyam Chitayat</a><span class="tip">Human synthetic biology.</span></td><td>$5,000</td></tr>
+    <tr><td><a href="https://x.com/lukas_bongartz" target="_blank" rel="noopener">Lukas Bongartz</a><span class="tip">For his work on semiconductor thermodynamics and applying physics to AI internals.</span></td><td>$5,000</td></tr>
     <tr><td>Maxwell Howeth</td><td>$5,000</td></tr>
     <tr><td>Preet Patel</td><td>$5,000</td></tr>
-    <tr><td>Shepherd Kruse</td><td>$5,000</td></tr>
+    <tr><td><a href="https://www.shepherdspacesystems.com/" target="_blank" rel="noopener">Shepherd Kruse</a><span class="tip">Built a vertically integrated rocket motor company solo. Propellant, casings, nozzles, igniters, all designed and made in-house. Supplying custom motors to counter-drone builders in weeks, not years.</span></td><td>$5,000</td></tr>
     <tr><td>Sofia Scarlat</td><td>$5,000</td></tr>
-    <tr><td>Soumil Sahjpall</td><td>$5,000</td></tr>
-    <tr><td>Timo Chang</td><td>$5,000</td></tr>
-    <tr><td>Zachary Plotkin</td><td>$5,000</td></tr>
+    <tr><td><a href="https://soumil.co.uk" target="_blank" rel="noopener">Soumil Sahjpall</a><span class="tip">Building the next generation of drones.</span></td><td>$5,000</td></tr>
+    <tr><td><a href="https://timochang.com" target="_blank" rel="noopener">Timo Chang</a><span class="tip">Building quantum computational sensors.</span></td><td>$5,000</td></tr>
+    <tr><td><a href="https://www.linkedin.com/in/zacharyaplotkin" target="_blank" rel="noopener">Zachary Plotkin</a><span class="tip">Making physiology computable.</span></td><td>$5,000</td></tr>
     <tr><td>Zander Chearavanont</td><td>$5,000</td></tr>
   </table>
 
